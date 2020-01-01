@@ -37,6 +37,8 @@ body {
 .stats {
     padding: 1rem;
     background-color: darken($grey, 10%);
+    font-size: 1.5rem;
+    font-weight: bolder;
     text-align: center;
 }
 
@@ -55,6 +57,16 @@ body {
     text-align: center;
 }
 
+
+@media (max-width: 576px) {
+    .main {
+        grid-template-rows: auto auto minmax(50vh, 500px);
+        grid-template-columns: 1fr;
+    }
+    .chart {
+        grid-column: span 1;
+    }
+}
 
 // === Components === //
 
@@ -131,9 +143,10 @@ $navbar-font: $font;
         justify-content: flex-end;
         align-items: center;
         padding: 0;
-        min-width: 50%;
+        min-width: 12.5rem;
         height: 100%;
         border: none;
+        border-radius: 0 0 0 50rem;
         text-align: center;
     }
     &__links {
@@ -182,8 +195,7 @@ $navbar-font: $font;
             position: absolute;
             top: 100%; right: 0; bottom: 0;
             padding: 2rem;
-            height: 90vh;
-            height: calc(100vh - 4rem);
+            height: 10rem;
             background-color: lighten($navbar-bg, 10%);
             text-align: right;
             opacity: 0;

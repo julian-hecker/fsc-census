@@ -1,3 +1,42 @@
+body {
+  margin: 0; }
+
+.wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
+
+.main {
+  display: grid;
+  grid-template-rows: auto minmax(50vh, 500px);
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  gap: 1rem;
+  margin: 1rem;
+  background-color: #fff; }
+
+.stats {
+  padding: 1rem;
+  background-color: #d5d5d5;
+  text-align: center; }
+
+.chart {
+  grid-column: span 2;
+  background-color: #d5d5d5; }
+
+.footer {
+  padding: 2rem;
+  background-color: #006456;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 2rem;
+  text-align: center; }
+
 .nav-bar {
   display: -webkit-box;
   display: flex;
@@ -6,12 +45,13 @@
           flex-direction: column;
   -webkit-box-pack: center;
           justify-content: center;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 10;
   width: 100%;
   height: 4rem;
   background-color: #006456;
-  color: #fff; }
+  color: #ffffff; }
   .nav-bar > .container {
     display: -webkit-box;
     display: flex;
@@ -21,13 +61,14 @@
     -webkit-box-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-            align-items: center; }
+            align-items: center;
+    margin: 0 2rem; }
   .nav-bar__logo {
     display: block;
     max-width: 25rem;
     width: 75%;
     padding: .5rem;
-    color: white;
+    color: #ffffff;
     font-family: monospace;
     font-size: 2rem;
     text-decoration: none;
@@ -49,7 +90,7 @@
       display: block;
       width: 100%;
       height: .25rem;
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 100rem;
       -webkit-transition: 300ms opacity, 300ms -webkit-transform;
       transition: 300ms opacity, 300ms -webkit-transform;
@@ -98,7 +139,7 @@
     position: relative;
     min-width: auto;
     padding: .5rem;
-    color: #fff;
+    color: #ffffff;
     -webkit-transition: all 250ms;
     transition: all 250ms; }
     .nav-bar__link--active::after {
@@ -108,7 +149,7 @@
       left: 0;
       width: 100%;
       height: .25rem;
-      background-color: #fff; }
+      background-color: #ffffff; }
   @media (max-width: 768px) {
     .nav-bar__button {
       display: -webkit-box;
@@ -159,6 +200,7 @@
       padding-bottom: 5rem;
       height: 100%; }
     .nav-bar__link {
-      padding: .5rem 0; } }
+      padding: .5rem 0;
+      font-size: 2rem; } }
   .nav-bar:focus-within {
     opacity: 1 !important; }

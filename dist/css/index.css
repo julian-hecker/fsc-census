@@ -150,8 +150,14 @@ body {
     min-width: auto;
     padding: .5rem;
     color: #ffffff;
+    text-decoration: none;
     -webkit-transition: all 250ms;
     transition: all 250ms; }
+    .nav-bar__link:hover, .nav-bar__link:focus, .nav-bar__link:active {
+      color: #cccccc;
+      text-decoration: none;
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3); }
     .nav-bar__link--active::after {
       content: '';
       position: absolute;
@@ -184,8 +190,10 @@ body {
       text-align: right;
       opacity: 0;
       pointer-events: none;
-      -webkit-transform: translateX(100%);
-              transform: translateX(100%); }
+      -webkit-transform: translateX(100%) scale(0);
+              transform: translateX(100%) scale(0);
+      -webkit-transform-origin: top;
+              transform-origin: top; }
       .nav-bar__nav--active {
         opacity: 1;
         -webkit-transform: none;

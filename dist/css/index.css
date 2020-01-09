@@ -46,7 +46,7 @@ body {
 
 @media (max-width: 576px) {
   .main {
-    grid-template-rows: auto auto minmax(50vh, 500px);
+    grid-template-rows: auto auto minmax(30vh, 200px);
     grid-template-columns: 1fr; }
   .chart {
     grid-column: span 1; } }

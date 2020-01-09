@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSC Population</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
-<!-- 
-    code in php
-    make layout like the figma sketch
- -->
 <body>
     <div class="wrapper">
         <nav class="nav-bar js-navbar">
@@ -44,13 +40,44 @@
                 <p>Greetings, planet</p>
             </div>
             <div class="chart">
-
+                <canvas id="chart" width="400" height="300"></canvas>
             </div>
         </main>
         <footer class="footer">
             <p>Made by the Farmingdale State College Tech Club</p>
         </footer>
     </div>
+    <script>
+// Toggle Navbar
+function toggleNav() {
+    document.querySelector('.js-nav-bar-button')
+        .classList.toggle('nav-bar__button--active');
+    document.querySelector('.js-nav-bar-nav')
+        .classList.toggle('nav-bar__nav--active');
+}
+
+
+// Create Chart
+const ctx = document.getElementById('chart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+        datasets: [{
+            label: 'Busy-ness',
+            data: [3, 0, 4, 1, 5, 7, 6, 8, 7, 10, 9, 6, 8, 7, 4, 5, 1, 0, 3, 2],
+            backgroundColor: [
+                '#006456',
+            ],
+        }],
+    },
+    options: {},
+});
+
+
+
+
+    </script>
 </body>
 </html>
 
@@ -59,5 +86,4 @@
 
     https://julian-hecker.github.io/fsc-census/dist/index.html
 
-    
  -->

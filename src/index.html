@@ -34,10 +34,10 @@
         </nav>
         <main class="main">
             <div class="stats">
-                <p>Herro, World</p>
+                <p>Above Average Traffic</p>
             </div>
             <div class="stats">
-                <p>Greetings, planet</p>
+                <p>Other Buildings</p>
             </div>
             <div class="chart">
                 <canvas id="chart" width="400" height="300"></canvas>
@@ -64,11 +64,16 @@ const chart = new Chart(ctx, {
     data: {
         labels: ['7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
         datasets: [{
-            label: 'Busy-ness',
+            label: 'Current Traffic: Library',
             data: [3, 0, 4, 1, 5, 7, 6, 8, 7, 10, 9, 6, 8, 7, 4, 5, 1, 0, 3, 2],
             backgroundColor: [
-                '#006456',
+                '#0064567f',
             ],
+        },
+        {
+            label: 'Yesterday\'s Traffic',
+            data: [8, 10, 6, 4, 7, 4, 4, 3, 2, 1, 0, 0, 0, 0, 0, 1, 0],
+            backgroundColor: '#ff00007f',
         }],
     },
     options: {},
